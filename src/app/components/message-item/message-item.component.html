@@ -1,9 +1,15 @@
 <li class="list-group-item">
-  <img [src]="message.avatar" class="avatar"/>
-  <div class="message">
-    {{message.content}}
+  <div class="row">
+    <div class="col-3">
+      <img [src]="message.avatar" class="avatar"/>
+    </div>
+
+    <div class="col-9 message">
+      {{message.content}}
+      <div class="timeform">
+          <span class="timestamp">{{message.timestamp | date : 'MMM dd h:mm a' }}</span>
+      </div>
+    </div>
   </div>
-  <div class="timeform">
-    <i class="fa fa-clock-o" aria-hidden="true"></i> <span class="timestamp">at {{message.timestamp | date : 'dd/MM/yyyy' }}</span>
-  </div>
+
 </li>

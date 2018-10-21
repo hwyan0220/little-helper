@@ -1,4 +1,10 @@
 <div class="chatcontrol"> 
-  <input type="text" class="form-control chatinput" [(ngModel)]="message.content"/>
-  <button class="btn btn-success sendbtn" (click)="sendMessage()">Send</button>
+  <div class= "row">
+      <div class="col-9 chatinput">
+          <input type="text" class="form-control " [(ngModel)]="message.content" placeholder="Type a message..."/>      
+      </div>
+      <div class="col-3 sendbtn">
+          <button class="btn btn-success " (click)="sendMessage()">Send</button>
+        </div>
+  </div>
 </div>

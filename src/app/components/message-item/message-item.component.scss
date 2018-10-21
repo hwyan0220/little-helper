@@ -1,7 +1,15 @@
+.list-group-item{
+  border:none;
+
+
 .message {
     font-size: 1em;
     font-style: italic;
     font-weight: 400;
+    display: inline-block;
+    background-color:#F4F3F0;
+    padding:.8em;
+    border-radius: 0.8em;
   }
   
   .timeform {
@@ -21,4 +29,4 @@
     width: 50px;
     margin-right: 20px;
   }
-  
+}

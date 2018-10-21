@@ -28,6 +28,7 @@ export class MessageFormComponent implements OnInit {
       this.messages.push(
         new Message(res.result.fulfillment.speech, 'assets/images/bot.png', res.timestamp)
       );
+      console.log(res);
     });
 
     this.message = new Message('', 'assets/images/user.png');
