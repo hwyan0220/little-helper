@@ -17,8 +17,16 @@ export class MessageFormComponent implements OnInit {
 
   constructor(private dialogFlowService: DialogflowService) { }
   ngOnInit() {
+    this.welcome();
   }
 
+  public welcome(): void {
+    this.dialogFlowService.getResponse('hello').subscribe(res => {
+      this.messages.push(
+        new Message(res.result.fulfillment.speech, 'assets/images/bot.png', res.timestamp)
+      );
+    });
+  }
 
   public sendMessage(): void {
     this.message.timestamp = new Date();
@@ -28,7 +36,6 @@ export class MessageFormComponent implements OnInit {
       this.messages.push(
         new Message(res.result.fulfillment.speech, 'assets/images/bot.png', res.timestamp)
       );
-      console.log(res);
     });
 
     this.message = new Message('', 'assets/images/user.png');

@@ -14,7 +14,7 @@ export class AppComponent {
   constructor() {
     this.message = new Message('', 'assets/images/user.png');
     this.messages = [
-      new Message('Hi, I\'m Norman, how can I help you today?', 'assets/images/bot.png', new Date())
     ];
+
   }
 }
