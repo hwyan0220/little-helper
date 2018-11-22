@@ -1,6 +1,8 @@
 .chatlist{
     height: 85%;
-    overflow-y: scroll;
-
+    overflow: scroll;
+    list-group{
+      overflow:scroll;
+    }
   }
   

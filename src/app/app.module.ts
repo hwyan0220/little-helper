@@ -8,6 +8,7 @@ import { MessageFormComponent } from './components/message-form/message-form.com
 import { FormsModule } from '@angular/forms';
 import { DialogflowService } from './services/dialogflow.service';
 import { HttpModule } from '@angular/http';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HttpModule } from '@angular/http';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    CommonModule
   ],
   providers: [
     DialogflowService

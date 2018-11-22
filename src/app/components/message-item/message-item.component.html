@@ -1,15 +1,31 @@
 <li class="list-group-item">
-  <div class="row">
+  <div *ngIf="!isUser" class="row">
     <div class="col-3">
       <img [src]="message.avatar" class="avatar"/>
     </div>
 
-    <div class="col-9 message">
-      {{message.content}}
-      <div class="timeform">
+    <div class="col-9">
+      <div class="botMessage">
+        {{message.content}}
+      </div>
+      <div class="botTimeform">
           <span class="timestamp">{{message.timestamp | date : 'MMM dd h:mm a' }}</span>
       </div>
     </div>
   </div>
+  <div *ngIf="isUser" class="row">
 
+
+    <div class="col-9">
+      <div class="userMessage">
+        {{message.content}}
+      </div>
+      <div class="userTimeform">
+          <span class="timestamp">{{message.timestamp | date : 'MMM dd h:mm a' }}</span>
+      </div>
+    </div>
+    <div class="col-3">
+      <img [src]="message.avatar" class="avatar"/>
+    </div>
+  </div>
 </li>

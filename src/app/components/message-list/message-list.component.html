@@ -1,4 +1,4 @@
-<div class="chatlist">
+<div class="chatlist" #panel [scrollTop]="panel.scrollHeight">
   <ul class="list-group">
     <app-message-item *ngFor="let msg of messages" [message]="msg"></app-message-item>
   </ul>
